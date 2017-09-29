@@ -54,10 +54,10 @@ def cleanpdf(source, destination, patterns):
 
 
 if len(sys.argv) < 4:
-    line1 = "usage: ./%s inputfile outputfile pattern1 ... patternN" % sys.argv[0]
+    line1 = "usage: %s inputfile outputfile pattern1 ... patternN" % sys.argv[0]
     line2 = textwrap.fill("This program searches for specific text strings in a pdf, and removes the blocks containing them. It can thus remove many of the 'watermarks' used by academic publishers to identify who downloaded the pdf from the paywall, provided common text found in these watermarks is given as arguments. The only dependency is pdftk, used to uncompress the pdf.", width=100)
     line3 = "If you want to update the pdf instead of creating a new one, you can provide the same value for inputfile and outputfile"
-    line4 = "Example: ./%s Lowry1951.pdf Lowry1951-clean.pdf 'EIDGENOESSISCHE TECHNISCHE HOCHSCHULE' 'Downloaded from' 'Access provided' 'For personal use only' '129.132.214.233'" % sys.argv[0]
+    line4 = "Example: %s Lowry1951.pdf Lowry1951-clean.pdf 'EIDGENOESSISCHE TECHNISCHE HOCHSCHULE' 'Downloaded from' 'Access provided' 'For personal use only' '129.132.214.233'" % sys.argv[0]
     sys.exit(line1 + '\n\n' + line2 + '\n\n' + line3 + '\n\n' + line4)
 
 source = sys.argv[1]
